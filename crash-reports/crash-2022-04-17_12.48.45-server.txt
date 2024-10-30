@@ -1,0 +1,124 @@
+---- Minecraft Crash Report ----
+// On the bright side, I bought you a teddy bear!
+
+Time: 4/17/22, 12:48 PM
+Description: Ticking entity
+
+java.lang.NullPointerException: Cannot invoke "bfg.h()" because the return value of "java.util.Map$Entry.getValue()" is null
+	at bdu.b(SourceFile:90)
+	at aya.eF(SourceFile:742)
+	at axy.w_(SourceFile:2609)
+	at aya.w_(SourceFile:546)
+	at bmd.w_(SourceFile:43)
+	at axy.k(SourceFile:2354)
+	at aya.k(SourceFile:346)
+	at blp.k(SourceFile:162)
+	at adw.a(SourceFile:702)
+	at cav.a(SourceFile:485)
+	at adw.a(SourceFile:363)
+	at csm.a(SourceFile:54)
+	at adw.a(SourceFile:331)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:907)
+	at acx.b(SourceFile:322)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:851)
+	at net.minecraft.server.MinecraftServer.w(SourceFile:697)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:273)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at bdu.b(SourceFile:90)
+	at aya.eF(SourceFile:742)
+	at axy.w_(SourceFile:2609)
+	at aya.w_(SourceFile:546)
+	at bmd.w_(SourceFile:43)
+	at axy.k(SourceFile:2354)
+	at aya.k(SourceFile:346)
+	at blp.k(SourceFile:162)
+	at adw.a(SourceFile:702)
+	at cav.a(SourceFile:485)
+	at adw.a(SourceFile:363)
+	at csm.a(SourceFile:54)
+	at adw.a(SourceFile:331)
+
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:creeper (blp)
+	Entity ID: 18439
+	Entity Name: Creeper
+	Entity's Exact location: 601.81, -19.00, 681.91
+	Entity's Block location: World: (601,-19,681), Section: (at 9,13,9 in 37,-2,42; chunk contains blocks 592,-64,672 to 607,319,687), Region: (1,1; contains chunks 32,32 to 63,63, blocks 512,-64,512 to 1023,319,1023)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at cav.a(SourceFile:485)
+	at adw.a(SourceFile:363)
+	at csm.a(SourceFile:54)
+	at adw.a(SourceFile:331)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:907)
+	at acx.b(SourceFile:322)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:851)
+	at net.minecraft.server.MinecraftServer.w(SourceFile:697)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:273)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+-- Affected level --
+Details:
+	All players: 1 total; [adx['Languinii'/802, l='ServerLevel[world]', x=558.37, y=40.00, z=600.06]]
+	Chunk stats: 5324
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,151,0), Section: (at 0,7,0 in 0,9,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 35250568 game time, 35312865 day time
+	Level name: world
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Level weather: Rain time: 23528 (now: false), thunder time: 99801 (now: false)
+	Known server brands: vanilla
+	Level was modded: false
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.b(SourceFile:907)
+	at acx.b(SourceFile:322)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:851)
+	at net.minecraft.server.MinecraftServer.w(SourceFile:697)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:273)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.18.2
+	Minecraft Version ID: 1.18.2
+	Operating System: Linux (amd64) version 5.13.0-39-generic
+	Java Version: 17.0.2, Private Build
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Private Build
+	Memory: 1410273608 bytes (1344 MiB) / 2147483648 bytes (2048 MiB) up to 2147483648 bytes (2048 MiB)
+	CPUs: 12
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+	Identifier: Intel64 Family 6 Model 165 Stepping 3
+	Microarchitecture: unknown
+	Frequency (GHz): 2.90
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: Device
+	Graphics card #0 vendor: NVIDIA Corporation (0x10de)
+	Graphics card #0 VRAM (MB): 288.00
+	Graphics card #0 deviceId: 0x1f0a
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MB): 15988.37
+	Virtual memory used (MB): 4069.78
+	Swap memory total (MB): 0.00
+	Swap memory used (MB): 0.00
+	JVM Flags: 2 total; -Xms2G -Xmx2G
+	Server Running: true
+	Player Count: 1 / 20; [adx['Languinii'/802, l='ServerLevel[world]', x=558.37, y=40.00, z=600.06]]
+	Data Packs: vanilla
+	World Generation: Stable
+	Is Modded: Probably not. Server jar signature and brand is untouched
+	Type: Dedicated Server (map_server.txt)

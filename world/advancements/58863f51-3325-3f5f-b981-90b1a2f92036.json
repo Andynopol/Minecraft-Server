@@ -1,0 +1,9 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:savanna": "2022-04-14 03:17:01 +0000"
+    },
+    "done": false
+  },
+  "DataVersion": 2975
+}

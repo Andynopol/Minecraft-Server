@@ -1,0 +1,116 @@
+---- Minecraft Crash Report ----
+// I blame Dinnerbone.
+
+Time: 4/10/22, 4:28 PM
+Description: Exception ticking world
+
+java.lang.NullPointerException: Exception ticking world
+	at dqy.<init>(SourceFile)
+	at dqy.a(SourceFile:67)
+	at dqt.<init>(SourceFile:40)
+	at cri.a(SourceFile:347)
+	at cri.F(SourceFile:351)
+	at cra.<init>(SourceFile:114)
+	at adj.a(SourceFile:710)
+	at com.mojang.datafixers.util.Either.lambda$mapLeft$0(Either.java:162)
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38)
+	at com.mojang.datafixers.util.Either.mapLeft(Either.java:162)
+	at adj.a(SourceFile:703)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482)
+	at adl.b(SourceFile:62)
+	at auz.d(SourceFile:157)
+	at adu$b.d(SourceFile:552)
+	at auz.y(SourceFile:131)
+	at adu$b.y(SourceFile:561)
+	at adu.d(SourceFile:278)
+	at net.minecraft.server.MinecraftServer.be(SourceFile:796)
+	at net.minecraft.server.MinecraftServer.y(SourceFile:784)
+	at auz.c(SourceFile:140)
+	at net.minecraft.server.MinecraftServer.x(SourceFile:769)
+	at net.minecraft.server.MinecraftServer.w(SourceFile:701)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:273)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at dqy.<init>(SourceFile)
+	at dqy.a(SourceFile:67)
+	at dqt.<init>(SourceFile:40)
+	at cri.a(SourceFile:347)
+	at cri.F(SourceFile:351)
+	at cra.<init>(SourceFile:114)
+	at adj.a(SourceFile:710)
+	at com.mojang.datafixers.util.Either.lambda$mapLeft$0(Either.java:162)
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38)
+	at com.mojang.datafixers.util.Either.mapLeft(Either.java:162)
+	at adj.a(SourceFile:703)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:646)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482)
+	at adl.b(SourceFile:62)
+	at auz.d(SourceFile:157)
+	at adu$b.d(SourceFile:552)
+	at auz.y(SourceFile:131)
+	at adu$b.y(SourceFile:561)
+	at adu.d(SourceFile:278)
+	at net.minecraft.server.MinecraftServer.be(SourceFile:796)
+
+-- Affected level --
+Details:
+	All players: 1 total; [adx['Languinii'/1470, l='ServerLevel[world]', x=-1372.80, y=157.37, z=1935.72]]
+	Chunk stats: 4917
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,151,0), Section: (at 0,7,0 in 0,9,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 23872689 game time, 23910024 day time
+	Level name: world
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Level weather: Rain time: 11684 (now: false), thunder time: 48491 (now: false)
+	Known server brands: vanilla
+	Level was modded: false
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.b(SourceFile:910)
+	at acx.b(SourceFile:322)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:851)
+	at net.minecraft.server.MinecraftServer.w(SourceFile:697)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:273)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.18.2
+	Minecraft Version ID: 1.18.2
+	Operating System: Linux (amd64) version 5.13.0-39-generic
+	Java Version: 17.0.2, Private Build
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Private Build
+	Memory: 1117006856 bytes (1065 MiB) / 2147483648 bytes (2048 MiB) up to 2147483648 bytes (2048 MiB)
+	CPUs: 12
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+	Identifier: Intel64 Family 6 Model 165 Stepping 3
+	Microarchitecture: unknown
+	Frequency (GHz): 2.90
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: Device
+	Graphics card #0 vendor: NVIDIA Corporation (0x10de)
+	Graphics card #0 VRAM (MB): 288.00
+	Graphics card #0 deviceId: 0x1f0a
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MB): 24180.36
+	Virtual memory used (MB): 3529.14
+	Swap memory total (MB): 8192.00
+	Swap memory used (MB): 0.00
+	JVM Flags: 2 total; -Xms2G -Xmx2G
+	Server Running: true
+	Player Count: 1 / 20; [adx['Languinii'/1470, l='ServerLevel[world]', x=-1372.80, y=157.37, z=1935.72]]
+	Data Packs: vanilla
+	World Generation: Stable
+	Is Modded: Probably not. Server jar signature and brand is untouched
+	Type: Dedicated Server (map_server.txt)

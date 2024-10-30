@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  minecraft-server:
+    build: .
+    container_name: minecraft-server
+    ports:
+      - "25565:25565"  # Minecraft server port
+    volumes:
+      - ./world:/minecraft/world  # Persist the world directory
+      - ./banned-ips.json:/minecraft/banned-ips.json  # Persist banned IPs
+      - ./banned-players.json:/minecraft/banned-players.json  # Persist banned players
+      - ./ops.json:/minecraft/ops.json  # Persist operators list
+      - ./usercache.json:/minecraft/usercache.json  # Persist user cache
+      - ./whitelist.json:/minecraft/whitelist.json  # Persist whitelist
+    restart: unless-stopped
+    command: ["java", "-jar", "./server.jar", "--nogui"]
+
+networks:
+  minecraft:
+    driver: bridge
+    external: true
