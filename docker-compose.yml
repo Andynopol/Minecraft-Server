@@ -5,7 +5,7 @@ services:
     build: .
     container_name: minecraft-server
     ports:
-      - "28585:28585"  # Minecraft server port
+      - "25565:28585"  # Minecraft server port
     volumes:
       - ./world:/minecraft/world  # Persist the world directory
       - ./banned-ips.json:/minecraft/banned-ips.json  # Persist banned IPs
